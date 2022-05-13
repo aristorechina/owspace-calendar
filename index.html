@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height:100%;overflow:hidden;">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit" />
+<meta name="referrer" content="same-origin">
+<meta name="force-rendering" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="https://s.cn.bing.net/th?id=ODLS.93e53688-a393-47ba-9bb6-2e97dae34b59">
+<link rel="shortcut icon" href="https://s.cn.bing.net/th?id=ODLS.93e53688-a393-47ba-9bb6-2e97dae34b59" type="image/x-icon">
+<title>单向历</title>
+<style type="text/css">
+    #calendar{height:100%;overflow:hidden;}
+    #calendar img{height:100%;overflow:hidden;margin:0 auto;display:block;max-height:100% !important;max-width:100% !important;}
+    @media (max-width:691px) {#calendar img{height:auto;width:100%;}}
+  </style>
+<script type="text/javascript">
+    window.onload=function(){getCalendar()}
+    function getCalendar(){
+      var d=new Date(),y=d.getFullYear(),m=d.getMonth()+1,n=d.getDate();
+      m=m>9?m:"0"+m;n=n>9?n:"0"+n;
+      var imgSrc = "https://img.owspace.com/Public/uploads/Download/"+y+"/"+m+n+".jpg"
+      var img= '<img  src="'+imgSrc+'" onclick="getCalendar()" />'
+      document.getElementById("calendar").innerHTML=img
+      RGBaster.colors(imgSrc);
+    }
+  </script>
+</head>
+<body id="calendar">
+  <script src="https://www.jsdelivr.com/package/npm/rocket-loader" data-cf-settings="a" defer="">
+  </script>
+  <script defer src="https://www.jsdelivr.com/package/npm/beacon">
+  </script>
+</body>
+</html>
